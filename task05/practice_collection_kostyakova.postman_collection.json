@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "a006b146-ac37-4250-8650-aad382ac7dde",
+		"name": "practice_collection_kostyakova",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37685997"
+	},
+	"item": [
+		{
+			"name": "Get people",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response is JSON\", function () {",
+							"    pm.response.to.be.json;",
+							"});",
+							"pm.test(\"Response does not contain error\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.not.have.property('error');",
+							"});",
+							"pm.test(\"Status code is not 404\", function () {",
+							"    pm.expect(pm.response.code).to.not.eql(404);",
+							"});",
+							"pm.test(\"Response is an array\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.results).to.be.an('array');",
+							"});",
+							"",
+							"",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}{{people}}",
+					"host": [
+						"{{baseUrl}}{{people}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get films",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response is JSON\", function () {",
+							"    pm.response.to.be.json;",
+							"});",
+							"pm.test(\"Response does not contain error\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.not.have.property('error');",
+							"});",
+							"pm.test(\"Status code is not 404\", function () {",
+							"    pm.expect(pm.response.code).to.not.eql(404);",
+							"});",
+							"pm.test(\"Response is an array\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.results).to.be.an('array');",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}{{films}}",
+					"host": [
+						"{{baseUrl}}{{films}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get species",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response is JSON\", function () {",
+							"    pm.response.to.be.json;",
+							"});",
+							"pm.test(\"Response does not contain error\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.not.have.property('error');",
+							"});",
+							"pm.test(\"Status code is not 404\", function () {",
+							"    pm.expect(pm.response.code).to.not.eql(404);",
+							"});",
+							"pm.test(\"Response is an array\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.results).to.be.an('array');",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}{{species}}",
+					"host": [
+						"{{baseUrl}}{{species}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get vehicles",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response is JSON\", function () {",
+							"    pm.response.to.be.json;",
+							"});",
+							"pm.test(\"Response does not contain error\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.not.have.property('error');",
+							"});",
+							"pm.test(\"Status code is not 404\", function () {",
+							"    pm.expect(pm.response.code).to.not.eql(404);",
+							"});",
+							"pm.test(\"Response is an array\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.results).to.be.an('array');",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}{{vehicles}}",
+					"host": [
+						"{{baseUrl}}{{vehicles}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get starships",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response is JSON\", function () {",
+							"    pm.response.to.be.json;",
+							"});",
+							"pm.test(\"Response does not contain error\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.not.have.property('error');",
+							"});",
+							"pm.test(\"Status code is not 404\", function () {",
+							"    pm.expect(pm.response.code).to.not.eql(404);",
+							"});",
+							"pm.test(\"Response is an array\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.results).to.be.an('array');",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}{{starships}}",
+					"host": [
+						"{{baseUrl}}{{starships}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get planets",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response is JSON\", function () {",
+							"    pm.response.to.be.json;",
+							"});",
+							"pm.test(\"Response does not contain error\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.not.have.property('error');",
+							"});",
+							"pm.test(\"Status code is not 404\", function () {",
+							"    pm.expect(pm.response.code).to.not.eql(404);",
+							"});",
+							"pm.test(\"Response is an array\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.results).to.be.an('array');",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}{{planets}}",
+					"host": [
+						"{{baseUrl}}{{planets}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
